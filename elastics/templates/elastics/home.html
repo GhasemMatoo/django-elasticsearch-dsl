@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Elastic Search</title>
+</head>
+<body>
+    <form action="">
+        {{form}}
+        <input type="submit" value="search">
+    </form>
+    <p>
+        {% for result in results %}
+        <p><a href="{% url 'elastic:book-detail' result.meta.id %}">{{result.name}}</a></p>
+        {% endfor %}
+    </p>
+</body>
+</html>
